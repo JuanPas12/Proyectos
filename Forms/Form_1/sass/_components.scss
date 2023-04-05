@@ -1,5 +1,12 @@
 @use "globals";
 
+@mixin btn-basic {
+    width: 17rem;
+    height: 3rem;
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+}
+
 .input-text {
     border: none;
     border-bottom: 1px solid #0000003c;
@@ -11,11 +18,9 @@
 }
 
 .btn-main {
+    @include btn-basic();
     background-color: #111727;
     border: 1px solid #111727;
-    width: 17rem;
-    height: 3rem;
-    padding: 0.75rem 3rem;
     color: white;
     border-radius: 2rem;
     font-size: 0.9rem;
@@ -30,12 +35,9 @@
 }
 
 .btn-google {
+    @include btn-basic();
     background-color: white;
     border: 1px solid #111727;
-    width: 17rem;
-    height: 3rem;
-    padding: 0.5rem 3rem;
-    border-radius: 2rem;
     transition: opacity 0.2s;
     display: flex;
     align-items: center;
@@ -54,13 +56,32 @@
             height: 75%;
         }
 
-    span{
-        font-size: 0.9rem;
-        padding: 0.9rem;
-    }
+        span {
+            font-size: 0.9rem;
+            padding: 0.9rem;
+        }
     }
 
     &:hover {
         opacity: 0.5;
+    }
+}
+
+.btn-sec{
+    @include btn-basic();
+    width: 5.75rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #111727;
+    border: 1px solid #111727;
+    color: white;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, border 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        border: 1px solid #111727;
+        color: #111727;
     }
 }
