@@ -2,9 +2,10 @@
 
 body,
 html {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "sans-serif";
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
 .container {
@@ -13,26 +14,53 @@ html {
     height: 100%;
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
 }
 
 .form-container {
-    width: 40%;
-    height: 100%;
+    width: 45%;
+    height: auto;
     margin: 1rem 0 1rem 1rem;
-    padding: 2rem;
-    background-color: red;
+    padding: 0 2rem 2rem 2rem;
+
+    .logo {
+        img {
+            width: 12rem;
+        }
+    }
+    form {
+        height: auto;
+        margin-top: 3rem;
+        padding: 0rem 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        h2 {
+            text-align: left;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #000000a5;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+        }
+    }
 }
 
 .image {
     background-image: url("../assets/img/bg.png");
     background-repeat: no-repeat;
     background-position: center;
-    width: 60%;
+    background-size: 100%;
+    width: 55%;
+    height: auto;
     border-radius: 2rem;
-    height: 100%;
     margin: 1rem 1rem 1rem 0;
     padding: 2rem;
     display: flex;
-    align-items: end;
-    justify-content: right;
+    align-items: start;
+    justify-content: flex-end;
 }
