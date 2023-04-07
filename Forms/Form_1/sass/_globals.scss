@@ -17,35 +17,51 @@ html {
     overflow-y: hidden;
 }
 
-.form-container {
+.first-container {
     width: 45%;
     height: auto;
     margin: 1rem 0 1rem 1rem;
     padding: 0 2rem 2rem 2rem;
-
     .logo {
         img {
             width: 12rem;
         }
     }
-    form {
-        height: auto;
+    .form-container {
         margin-top: 3rem;
-        padding: 0rem 10rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: left;
-        h2 {
-            text-align: left;
-            font-size: 2rem;
+        align-items: center;
+        width: 100%;
+        form {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            h2 {
+                text-align: left;
+                font-size: 2rem;
+            }
+
+            p {
+                color: #000000a5;
+                margin-top: -1rem;
+                margin-bottom: 2rem;
+                font-size: 0.85rem;
+                visibility: hidden;
+            }
         }
 
-        p {
-            color: #000000a5;
-            margin-top: -1rem;
-            margin-bottom: 2rem;
-            font-size: 0.85rem;
+        .login{
+            visibility: hidden;
+            margin-top: 2rem;
+            color: #000000;
+            font-size: 0.9rem;
+            .s-login{
+                font-weight: bold;
+            }
         }
     }
 }
@@ -54,7 +70,7 @@ html {
     background-image: url("../assets/img/bg.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: auto;
     width: 55%;
     height: auto;
     border-radius: 2rem;
@@ -63,4 +79,40 @@ html {
     display: flex;
     align-items: start;
     justify-content: flex-end;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .first-container {
+        .form-container {
+            form {
+                h2 {
+                    font-size: 1.65rem;
+                }
+
+                p {
+                    font-size: 0.70rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .first-container{
+        width: 100%;
+        .logo{
+            img{
+                content: url("../assets/img/logo_r.png");
+                width: 4rem;
+            }
+        }
+        .form-container{
+            .login{
+                visibility: visible;
+            }
+        }
+    }
+    .image{
+        display: none;
+    }
 }

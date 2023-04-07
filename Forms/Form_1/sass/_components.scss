@@ -88,3 +88,13 @@
         color: #111727;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .btn-main{
+        padding: 0.5rem 2.5rem;
+    }
+
+    .btn-google{
+        padding: 0.5rem 2.5rem;
+    }
+}

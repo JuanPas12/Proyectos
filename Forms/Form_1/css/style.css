@@ -16,40 +16,56 @@ html {
   overflow-y: hidden;
 }
 
-.form-container {
+.first-container {
   width: 45%;
   height: auto;
   margin: 1rem 0 1rem 1rem;
   padding: 0 2rem 2rem 2rem;
 }
-.form-container .logo img {
+.first-container .logo img {
   width: 12rem;
 }
-.form-container form {
-  height: auto;
+.first-container .form-container {
   margin-top: 3rem;
-  padding: 0rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.first-container .form-container form {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
 }
-.form-container form h2 {
+.first-container .form-container form h2 {
   text-align: left;
   font-size: 2rem;
 }
-.form-container form p {
+.first-container .form-container form p {
   color: rgba(0, 0, 0, 0.6470588235);
   margin-top: -1rem;
   margin-bottom: 2rem;
   font-size: 0.85rem;
+  visibility: hidden;
+}
+.first-container .form-container .login {
+  visibility: hidden;
+  margin-top: 2rem;
+  color: #000000;
+  font-size: 0.9rem;
+}
+.first-container .form-container .login .s-login {
+  font-weight: bold;
 }
 
 .image {
   background-image: url("../assets/img/bg.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: auto;
   width: 55%;
   height: auto;
   border-radius: 2rem;
@@ -60,6 +76,29 @@ html {
   justify-content: flex-end;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .first-container .form-container form h2 {
+    font-size: 1.65rem;
+  }
+  .first-container .form-container form p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 767px) {
+  .first-container {
+    width: 100%;
+  }
+  .first-container .logo img {
+    content: url("../assets/img/logo_r.png");
+    width: 4rem;
+  }
+  .first-container .form-container .login {
+    visibility: visible;
+  }
+  .image {
+    display: none;
+  }
+}
 .input-text {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2352941176);
@@ -143,6 +182,15 @@ html {
   background-color: white;
   border: 1px solid #111727;
   color: #111727;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn-main {
+    padding: 0.5rem 2.5rem;
+  }
+  .btn-google {
+    padding: 0.5rem 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
